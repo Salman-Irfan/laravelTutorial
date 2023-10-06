@@ -55,3 +55,12 @@ Route::get('/news/{id?}/comments/{commentid?}', function(string $id, string $com
         return "<h1>No data found</h1>";
     }
 });
+
+// parameters with constraints
+Route::get('/contacts/{no}', function(string $no){
+    return 'Contact no: ' .$no;
+
+})->whereNumber('no'); // $no must be a number
+// other constraints are whereAlpha, whereAlphaNumeric
+// whereIn('category', ['movie', 'song'])
+// where('id', '[@0-9]+')
