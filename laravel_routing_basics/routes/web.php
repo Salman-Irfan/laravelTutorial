@@ -46,3 +46,12 @@ Route::get('/blogs/{id?}', function (String $id = null) {
         return view('blogs/blogs');
     }
 });
+
+// multiple parameters
+Route::get('/news/{id?}/comments/{commentid?}', function(string $id, string $comment = null) {
+    if($id){
+        return "<h1>News Id: ".$id." </h1> <h2>Comment no: ".$comment." </h2>";
+    }else{
+        return "<h1>No data found</h1>";
+    }
+});
