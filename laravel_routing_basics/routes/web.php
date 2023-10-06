@@ -65,3 +65,24 @@ Route::get('/contacts/{no}', function(string $no){
 // other constraints are whereAlpha, whereAlphaNumeric
 // whereIn('category', ['movie', 'song'])
 // where('id', '[@0-9]+')
+
+// Group Routing
+Route::prefix('page')->group(function(){
+    // route 1
+    Route::get('post/1', function(){
+        // ...
+    });
+    // route 2
+    Route::get('about', function(){
+        // ...
+    });
+    // route 3
+    Route::get('contact', function(){
+        // ...
+    });
+});
+
+// page not found
+Route::fallback(function(){
+    return "<h1>Page not Found</h1>";
+});
