@@ -62,3 +62,39 @@ Learnt the laravel web routing, icluding   routing parameters constraints, and
 
 <h4>Make model and migration file side by side</h4>
 <p>#php artisan make:model Task -m</p>
+
+<h4>Laravel Migration modifiers & constraints</h4>
+
+<h5>Modifications with migration tables</h5>
+<p>1. Column modifications</p>
+<p>2. Table modifications</p>
+
+<h5>Column Modifications</h5>
+<p>1. Add new column</p>
+<p>2. Rename column</p>
+<p>3. Delete column</p>
+<p>4. Change column order</p>
+<p>4. Change datatype or column size</p>
+
+<h5>Table Modifications</h5>
+<p>Rename table</p>
+<p>Delete table</p>
+
+<h5>Column Modifications Commands</h5>
+<p>#php artisan make:migration update_students_table --table=students</p>
+<p>$table->renameColumn('from', 'to')</p>
+<p>$table->dropColumn('city')</p>
+<p>$table->dropColumn(['city', 'name'])</p>
+<p>To change the size of existing column</p>
+<p>$table->string('name', 50)->change()</p>
+<p>To apply multiple changes in an existing column</p>
+<p>$table->integer('votes')->unsidned()->default(1)->comment('any comment')->change()</p>
+<p>Change Column Order</p>
+<p>$table->after('password', function(Blueprint $table){
+    $table->string(address);
+})</p>
+
+<h5>Modify Table with Migration</h5>
+<p>#php artisan make:migration table-migration</p>
+<p>Schema::rename('from', 'to')</p>
+<p>Schema::dropIfExists('users')</p>
