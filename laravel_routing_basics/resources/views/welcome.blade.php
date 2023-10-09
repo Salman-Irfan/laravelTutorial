@@ -86,5 +86,7 @@
         @endforeach
     </tbody>
 </table>
+@include('pages.header', ["name" => "salman irfan"])
+@includeif('pages.footer')
 </body>
 </html>

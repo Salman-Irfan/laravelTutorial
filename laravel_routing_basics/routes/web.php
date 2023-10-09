@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -67,7 +68,7 @@ Route::get('/contacts/{no}', function(string $no){
 // where('id', '[@0-9]+')
 
 // Group Routing
-Route::prefix('page')->group(function(){
+Route::prefix('name')->group(function(){
     // route 1
     Route::get('post/1', function(){
         // ...
@@ -86,3 +87,12 @@ Route::prefix('page')->group(function(){
 Route::fallback(function(){
     return "<h1>Page not Found</h1>";
 });
+
+// controller
+Route::get('/', [PageController::class, 'showUser']);
+
+// group controller
+// Route::controller(PageController::class)->group(function(){
+    // Route::get('/',  'showUser');
+    // Route::get('/blog',  'showBlog');
+// })
