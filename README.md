@@ -105,3 +105,20 @@ Learnt the laravel web routing, icluding   routing parameters constraints, and
 <p>$table->string('city')->default('Lhr')</p>
 <p>$table->primary('student_id')</p>
 
+<h2>Primary and Foreign Key</h2>
+
+| Table 1: Libraries            |              |
+| ------------------------------| ------------ |
+| **Field**                     | **Type**     |
+| Id (Primary Key)              | Integer      |
+| stu_id (Foreign Key)          | Integer      |
+| Book                          | String       |
+| due_date                      | Date         |
+| status                        | String       |
+
+| Table 2: Students            |              |
+| ---------------------------- | ------------ |
+| **Field**                    | **Type**     |
+| Id (Primary Key)             | Integer      |
+| Name                         | String       |
+| Email                        | String       |
