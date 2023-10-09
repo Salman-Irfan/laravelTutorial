@@ -96,3 +96,7 @@ Route::get('/', [PageController::class, 'showUser']);
     // Route::get('/',  'showUser');
     // Route::get('/blog',  'showBlog');
 // })
+
+// ################
+// php artisan route:list --except-vendor
+
