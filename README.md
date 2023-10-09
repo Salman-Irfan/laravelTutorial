@@ -98,3 +98,10 @@ Learnt the laravel web routing, icluding   routing parameters constraints, and
 <p>#php artisan make:migration table-migration</p>
 <p>Schema::rename('from', 'to')</p>
 <p>Schema::dropIfExists('users')</p>
+
+<h3>Constraints with Migration</h3>
+<p>$table->integer('student_id')</p>
+<p>$table->string('email')->unique()->nullable()</p>
+<p>$table->string('city')->default('Lhr')</p>
+<p>$table->primary('student_id')</p>
+

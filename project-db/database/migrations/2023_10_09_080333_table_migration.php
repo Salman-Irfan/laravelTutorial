@@ -11,8 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::rename('students', 'student');
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('student');
     }
 
     /**
