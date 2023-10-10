@@ -60,6 +60,7 @@ class UserController extends Controller
                 ['name', 'user10'],
                 ['email', 'user10@gmail.com']
             ])
+            ->orWhere('age', '>=', 36)
             ->get();
         return $user;
     }
