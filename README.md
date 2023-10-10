@@ -211,7 +211,7 @@ Student::factory()->count(5)->create();
 <h3>http://127.0.0.1:8000/api/</h3>
 <h4>get all records</h4>
 <pre>
-<p>endpoint: /getAllUsers</p>
+endpoint: /getAllUsers
 headers: none
 body: none
 Respponse:
