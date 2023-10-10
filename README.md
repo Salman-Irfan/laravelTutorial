@@ -246,3 +246,31 @@ Respponse:
   },
 ]
 </pre>
+
+<h4>get all users by name</h4>
+<pre>
+endpoint: /users/user10
+headers: none
+body: none
+Respponse:
+[
+  {
+    "id": 10,
+    "name": "user10",
+    "email": "user10@gmail.com",
+    "age": 20,
+    "city": "user10 city",
+    "created_at": "2023-10-10 06:37:40",
+    "updated_at": "2023-10-10 06:37:40"
+  },
+  {
+    "id": 13,
+    "name": "user10",
+    "email": "test1@gmail.com",
+    "age": 20,
+    "city": "user10 city",
+    "created_at": "2023-10-10 08:09:44",
+    "updated_at": "2023-10-10 08:09:44"
+  },
+]
+</pre>
