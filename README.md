@@ -176,3 +176,30 @@ $this->call([
 <h6>OR</h6>
 <p>Ignore step 4 and run the below command directly</p>
 <pre>#php artisan db:seed --class=StudentSeeder</pre>
+
+<h3>Factory - RealFake Data</h3>
+<h4>Steps</h4>
+<h5>1. Make Model</h5>
+<pre>#php artisan make:model Student</pre>
+<h5>2. Make Factory File</h5>
+<pre>#php artisan make:factory StudentFactory</pre>
+<h5>3. Inside this file</h5>
+<pre>
+class StudentFactory extends Factory {
+    public function definition(): array {
+        return [
+            'name' => 'Fake Student',
+            'email' => 'fake@example.com',
+        ];
+    }
+}
+</pre>
+
+<h5>4. Seeders/DatabaseSeeder.php</h5>
+<pre>
+use App\Models\Student;
+Student::factory()->count(5)->create();
+</pre>
+
+<h5>5. Run db:seed command</h5>
+<pre>#php artisan db:seed</pre>
