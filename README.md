@@ -140,3 +140,39 @@ Learnt the laravel web routing, icluding   routing parameters constraints, and
         $table->boolean('status');
     });
 </pre>
+
+<h2>Laravel Database Seeders</h2>
+<p>Seeders and Factory</p>
+
+<h3>Seeders - Real Data</h3>
+<h4>Steps</h4>
+<h5>1. Make Model</h5>
+<p>#php artisan make:model Student</p>
+<h5>2. Make Seeder File</h5>
+<p>#php artisan make:seeder StudentSeeder</p>
+<h5>3. Inside StudentSeeder File</h5>
+<pre>
+use App\Model\Student;
+class StudentSeeder extends Seeder{
+    public function run(): void {
+        Student::create([
+            'name' => 'Seeder Student',
+            'email' => 'seeder.student@example.com',
+        ]);
+    }
+}
+</pre>
+
+<h5>4. Run this seeder file</h5>
+<p>/database/Seeders/DatabaseSeeder.php:</p>
+<pre>
+$this->call([
+    StudentSeeder::class
+]);
+</pre>
+
+<h5>5. Run seeder command</h5>
+<pre>#php artisan db:seed</pre>
+<h6>OR</h6>
+<p>Ignore step 4 and run the below command directly</p>
+<pre>#php artisan db:seed --class=StudentSeeder</pre>
