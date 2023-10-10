@@ -19,6 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// ##### READ #####
 // all users
 Route::get('/getAllUsers', [UserController::class, 'showUsers']);
 // specific users by id
@@ -29,3 +30,10 @@ Route::get('/users/{name}', [UserController::class, 'showUserByName'])->whereAlp
 Route::get('/specific-details', [UserController::class, 'showSpecificColumns']);
 // find by condition
 Route::get('/condition', [UserController::class, 'showByCondition']);
+
+// ##### CREATE #####
+Route::get('/create-user', [UserController::class, 'addUser']);
+// #### UPDATE #####
+Route::get('/update-user', [UserController::class, 'updateUser']);
+// #### DELETE #####
+Route::get('/delete-user/{id}', [UserController::class, 'deleteUser']);

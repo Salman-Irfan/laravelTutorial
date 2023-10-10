@@ -9,6 +9,7 @@ use function Laravel\Prompts\select;
 
 class UserController extends Controller
 {
+    // ######### READ #############
     // all users
     public function showUsers(){
         $users = DB::table('users')->get();
@@ -63,5 +64,43 @@ class UserController extends Controller
             ->orWhere('age', '>=', 36)
             ->get();
         return $user;
+    }
+
+    // ######### CREATE #########
+    public function addUser(){
+        $user = DB::table('users')->insert([
+            [
+                'name' => 'unique3',
+                'email' => 'unique3@gmail.com',
+                'age' => 25,
+                'city' => 'lhr',
+                'created_at' => now(),
+                'updated_at' => now()
+            ],
+            [
+                'name' => 'unique4',
+                'email' => 'unique4@gmail.com',
+                'age' => 25,
+                'city' => 'lhr',
+                'created_at' => now(),
+                'updated_at' => now()
+            ]
+        ]);
+    }
+    // update
+    public function updateUser()
+    {
+        $user = DB::table('users')
+        ->where('id', 1)
+        ->update([
+            'city' => 'mul'
+        ]);
+    }
+    // delete
+    public function deleteUser($id)
+    {
+        $user = DB::table('users')
+            ->where('id', $id)
+            ->delete();
     }
 }
