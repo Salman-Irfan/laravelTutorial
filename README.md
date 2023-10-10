@@ -122,3 +122,21 @@ Learnt the laravel web routing, icluding   routing parameters constraints, and
 | Id (Primary Key)             | Integer      |
 | Name                         | String       |
 | Email                        | String       |
+
+<h3>onUpdate & onDelete = 'cascade'</h3>
+<p>To automatically update the foreign key by making changing in its associated primary key</p>
+
+<p>
+    Schema::create('libraries', function (Blueprint $table) {
+        $table->id();
+        $table->unsignedBigInteger('stu_id');
+        $table->foreign('stu_id')
+                ->references('id')
+                ->on('students')
+                ->onUpdate('cascade')
+                ->onDelete('cascade');
+        $table->string('book');
+        $table->date('due_date')->nullable();
+        $table->boolean('status');
+    });
+</p>
