@@ -56,7 +56,10 @@ class UserController extends Controller
     public function showByCondition()
     {
         $user = DB::table('users')
-            ->where('name', 'user10')
+            ->where([
+                ['name', 'user10'],
+                ['email', 'user10@gmail.com']
+            ])
             ->get();
         return $user;
     }
