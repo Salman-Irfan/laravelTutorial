@@ -27,3 +27,5 @@ Route::get('/users/{id}', [UserController::class, 'showUserById'])->whereNumber(
 Route::get('/users/{name}', [UserController::class, 'showUserByName'])->whereAlphaNumeric('name');
 // get specific columns
 Route::get('/specific-details', [UserController::class, 'showSpecificColumns']);
+// find by condition
+Route::get('/condition', [UserController::class, 'showByCondition']);

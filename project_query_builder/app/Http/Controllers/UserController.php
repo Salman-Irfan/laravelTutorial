@@ -43,8 +43,21 @@ class UserController extends Controller
     // showSpecificColumns
     public function showSpecificColumns()
     {
-        $user = DB::table('users')->select('name', 'email')->get();
+        $user = DB::table('users')
+            ->select('name', 'email')
+            ->get();
+        return $user;
+        // or
+        // $user = DB::table('users')
+        //     ->pluck('name', 'email');
+        // return $user;
+    }
+    // show by condition
+    public function showByCondition()
+    {
+        $user = DB::table('users')
+            ->where('name', 'user10')
+            ->get();
         return $user;
     }
-
 }
