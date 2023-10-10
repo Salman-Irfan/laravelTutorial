@@ -203,3 +203,27 @@ Student::factory()->count(5)->create();
 
 <h5>5. Run db:seed command</h5>
 <pre>#php artisan db:seed</pre>
+
+
+<h1>Laravel Query Builder</h1>
+<h1>Api Controllers</h1>
+<h2>Base Url</h2>
+<h3>http://127.0.0.1:8000/api/</h3>
+<h4>get all records</h4>
+<p>endpoint: /getAllUsers</p>
+<pre>
+headers: none
+body: none
+Respponse:
+[
+  {
+    "id": 1,
+    "name": "seeder",
+    "email": "seeder@gmail.com",
+    "age": 36,
+    "city": "seeder city",
+    "created_at": "2023-10-10 06:29:54",
+    "updated_at": "2023-10-10 06:29:54"
+  },
+]
+</pre>
