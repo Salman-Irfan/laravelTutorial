@@ -19,4 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+// all users
 Route::get('/getAllUsers', [UserController::class, 'showUsers']);
+// specific users by id
+Route::get('/users/{id}', [UserController::class, 'showUserById'])->whereNumber('id');
+// get 
