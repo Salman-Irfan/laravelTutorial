@@ -227,3 +227,22 @@ Respponse:
   },
 ]
 </pre>
+
+<h4>get specific user by id</h4>
+<pre>
+endpoint: /users/1
+headers: none
+body: none
+Respponse:
+[
+  {
+    "id": 1,
+    "name": "seeder",
+    "email": "seeder@gmail.com",
+    "age": 36,
+    "city": "seeder city",
+    "created_at": "2023-10-10 06:29:54",
+    "updated_at": "2023-10-10 06:29:54"
+  },
+]
+</pre>
