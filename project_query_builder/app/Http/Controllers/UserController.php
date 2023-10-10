@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
+use function Laravel\Prompts\select;
+
 class UserController extends Controller
 {
     // all users
@@ -15,7 +17,9 @@ class UserController extends Controller
     // user by id
     public function showUserById($id)
     {
-        $user = DB::table('users')->where('id', $id)->first();
+        $user = DB::table('users')
+            ->where('id', $id)
+            ->first();
         // echo $user;
         if ($user) {
             return $user;
@@ -26,7 +30,9 @@ class UserController extends Controller
     // all users by same name
     public function showUserByName($name)
     {
-        $user = DB::table('users')->where('name', $name)->get();
+        $user = DB::table('users')
+            ->where('name', $name)
+            ->get();
         // echo $user;
         if ($user) {
             return $user;
@@ -34,4 +40,11 @@ class UserController extends Controller
             return response()->json(['message' => 'User not found'], 404);
         }
     }
+    // showSpecificColumns
+    public function showSpecificColumns()
+    {
+        $user = DB::table('users')->select('name', 'email')->get();
+        return $user;
+    }
+
 }

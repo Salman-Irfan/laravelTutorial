@@ -25,3 +25,5 @@ Route::get('/getAllUsers', [UserController::class, 'showUsers']);
 Route::get('/users/{id}', [UserController::class, 'showUserById'])->whereNumber('id');
 // get users having same names
 Route::get('/users/{name}', [UserController::class, 'showUserByName'])->whereAlphaNumeric('name');
+// get specific columns
+Route::get('/specific-details', [UserController::class, 'showSpecificColumns']);

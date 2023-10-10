@@ -141,6 +141,7 @@ Learnt the laravel web routing, icluding   routing parameters constraints, and
     });
 </pre>
 
+<h1>Day 4</h1>
 <h2>Laravel Database Seeders</h2>
 <p>Seeders and Factory</p>
 
@@ -274,3 +275,4 @@ Respponse:
   },
 ]
 </pre>
+
