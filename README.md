@@ -276,3 +276,16 @@ Respponse:
 ]
 </pre>
 
+<h4>shw specific details from all records</h4>
+<pre>
+endpoint: /getAllUsersspecific-details
+headers: none
+body: none
+Respponse:
+[
+  {
+    "name": "seeder",
+    "email": "seeder@gmail.com"
+  },
+]
+</pre>
