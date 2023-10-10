@@ -24,5 +24,14 @@ class UserController extends Controller
         }
     }
     // all users by same name
-    
+    public function showUserByName($name)
+    {
+        $user = DB::table('users')->where('name', $name)->get();
+        // echo $user;
+        if ($user) {
+            return $user;
+        } else {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+    }
 }

@@ -14,19 +14,19 @@ class UserSeeder extends Seeder
             [
                 [
                     'name' => 'user10',
-                    'email' => 'user10@gmail.com',
+                    'email' => 'test1@gmail.com',
                     'age' => 20,
                     'city' => 'user10 city'
                 ],
                 [
-                    'name' => 'user11',
-                    'email' => 'user11@gmail.com',
+                    'name' => 'user10',
+                    'email' => 'test2@gmail.com',
                     'age' => 36,
                     'city' => 'user11 city'
                 ],
                 [
-                    'name' => 'user12',
-                    'email' => 'user12@gmail.com',
+                    'name' => 'user10',
+                    'email' => 'test3@gmail.com',
                     'age' => 36,
                     'city' => 'user12 city'
                 ],

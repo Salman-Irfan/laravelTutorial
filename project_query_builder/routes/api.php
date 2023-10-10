@@ -23,4 +23,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/getAllUsers', [UserController::class, 'showUsers']);
 // specific users by id
 Route::get('/users/{id}', [UserController::class, 'showUserById'])->whereNumber('id');
-// get 
+// get users having same names
+Route::get('/users/{name}', [UserController::class, 'showUserByName'])->whereAlphaNumeric('name');
