@@ -177,7 +177,7 @@ $this->call([
 <p>Ignore step 4 and run the below command directly</p>
 <pre>#php artisan db:seed --class=StudentSeeder</pre>
 
-<h3>Factory - RealFake Data</h3>
+<h3>Factory - Fake Data</h3>
 <h4>Steps</h4>
 <h5>1. Make Model</h5>
 <pre>#php artisan make:model Student</pre>
