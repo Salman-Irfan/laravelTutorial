@@ -308,3 +308,44 @@ Respponse:
   }
 ]
 </pre>
+
+<h4>Create - Post Request - Add User</h4>
+<pre>
+endpoint: /condition/create-user
+headers: none
+</pre>
+
+<table>
+  <th>
+    <td>Response</td>
+    <td>Response</td>
+  </th>
+  <tr>
+    <td>
+      <pre>
+        {
+          "name" : "postman9",
+          "email" : "postman9@email.com",
+          "age" : 25,
+          "city" : "lhr"
+        }
+      </pre>
+    </td>
+    <td>
+      <pre>
+        {
+          "message": "User created successfully",
+          "user": {
+            "id": 20,
+            "name": "postman9",
+            "email": "postman9@email.com",
+            "age": 25,
+            "city": "lhr",
+            "created_at": "2023-10-11 02:54:47",
+            "updated_at": "2023-10-11 02:54:47"
+          }
+        }
+      </pre>
+    </td>
+  </tr>
+</table>
