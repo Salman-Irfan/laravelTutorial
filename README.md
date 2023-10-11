@@ -317,7 +317,7 @@ headers: none
 
 <table>
   <th>
-    <td>Response</td>
+    <td>Request</td>
     <td>Response</td>
   </th>
   <tr>
