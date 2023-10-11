@@ -311,7 +311,7 @@ Respponse:
 
 <h4>Create - Post Request - Add User</h4>
 <pre>
-endpoint: /condition/create-user
+endpoint: /create-user
 headers: none
 </pre>
 
@@ -346,6 +346,51 @@ headers: none
     "city": "lhr",
     "created_at": "2023-10-11 02:54:47",
     "updated_at": "2023-10-11 02:54:47"
+  }
+}
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Update - Put Request - Add User</h4>
+<pre>
+endpoint: update-user/20
+headers: none
+</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+{
+  "name" : "postman21",
+  "email" : "postman21@email.com",
+  "age" : 20,
+  "city" : "lhr"
+}
+        </pre>
+      </td>
+      <td>
+        <pre>
+{
+  "message": "User updated successfully",
+  "user": {
+    "id": 20,
+    "name": "postman21",
+    "email": "postman21@email.com",
+    "age": 20,
+    "city": "lhr",
+    "created_at": "2023-10-11 04:39:46",
+    "updated_at": "2023-10-11 04:41:57"
   }
 }
         </pre>
