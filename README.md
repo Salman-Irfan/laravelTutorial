@@ -320,8 +320,8 @@ headers: none
     <td>Request</td>
     <td>Response</td>
   </th>
-  <tr>
-    <td>
+  <td>
+    <tr>
       <pre>
         {
           "name" : "postman9",
@@ -330,8 +330,8 @@ headers: none
           "city" : "lhr"
         }
       </pre>
-    </td>
-    <td>
+    </tr>
+    <tr>
       <pre>
         {
           "message": "User created successfully",
@@ -346,6 +346,6 @@ headers: none
           }
         }
       </pre>
-    </td>
-  </tr>
+    </tr>
+  </td>
 </table>
