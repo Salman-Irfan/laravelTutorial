@@ -89,13 +89,24 @@ class UserController extends Controller
     }
 
     // update
-    public function updateUser()
+    public function updateUser(Request $request ,$id)
     {
-        $user = DB::table('users')
-            ->where('id', 1)
+        $updatedUser = DB::table('users')
+            ->where('id', $id)
             ->update([
-                'city' => 'mul'
+                'name' => $request->name,
+                'email' => $request->email,
+                'age' => $request->age,
+                'city' => $request->city,
+                'updated_at' => now()
             ]);
+        if ($updatedUser) {
+            $updatedUser = DB::table('users')->where('id', $id)->first();
+            return response()->json([
+                'message' => 'User updated successfully',
+                'user' => $updatedUser
+            ]);
+        }
     }
     // delete
     public function deleteUser($id)
