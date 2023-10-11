@@ -11,7 +11,8 @@ class UserController extends Controller
 {
     // ######### READ #############
     // all users
-    public function showUsers(){
+    public function showUsers()
+    {
         $users = DB::table('users')->get();
         return $users;
     }
@@ -67,34 +68,34 @@ class UserController extends Controller
     }
 
     // ######### CREATE #########
-    public function addUser(){
-        $user = DB::table('users')->insert([
-            [
-                'name' => 'unique3',
-                'email' => 'unique3@gmail.com',
-                'age' => 25,
-                'city' => 'lhr',
-                'created_at' => now(),
-                'updated_at' => now()
-            ],
-            [
-                'name' => 'unique4',
-                'email' => 'unique4@gmail.com',
-                'age' => 25,
-                'city' => 'lhr',
-                'created_at' => now(),
-                'updated_at' => now()
-            ]
+    public function addUser(Request $request)
+    {
+        $user = DB::table('users')->insertGetId([
+            'name' => $request->name,
+            'email' => $request->email,
+            'age' => $request->age,
+            'city' => $request->city,
+            'created_at' => now(),
+            'updated_at' => now()
         ]);
+
+        if ($user) {
+            $newUser = DB::table('users')->where('id', $user)->first();
+            return response()->json([
+                'message' => 'User created successfully',
+                'user' => $newUser
+            ]);
+        }
     }
+
     // update
     public function updateUser()
     {
         $user = DB::table('users')
-        ->where('id', 1)
-        ->update([
-            'city' => 'mul'
-        ]);
+            ->where('id', 1)
+            ->update([
+                'city' => 'mul'
+            ]);
     }
     // delete
     public function deleteUser($id)

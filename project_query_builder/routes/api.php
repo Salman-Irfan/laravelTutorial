@@ -32,7 +32,7 @@ Route::get('/specific-details', [UserController::class, 'showSpecificColumns']);
 Route::get('/condition', [UserController::class, 'showByCondition']);
 
 // ##### CREATE #####
-Route::get('/create-user', [UserController::class, 'addUser']);
+Route::post('/create-user', [UserController::class, 'addUser']);
 // #### UPDATE #####
 Route::get('/update-user', [UserController::class, 'updateUser']);
 // #### DELETE #####
