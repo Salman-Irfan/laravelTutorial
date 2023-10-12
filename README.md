@@ -439,11 +439,6 @@ body: none
     "due_date": "2023-10-07"
   },
   {
-    "name": "seeder1",
-    "book": "book one",
-    "due_date": "2023-10-07"
-  },
-  {
     "name": "seeder3",
     "book": "book four",
     "due_date": "2023-10-10"
