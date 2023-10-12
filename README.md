@@ -427,7 +427,7 @@ body: none
     <tr>
       <td>
         <pre>
-{}
+
         </pre>
       </td>
       <td>
@@ -469,7 +469,7 @@ body: none
     <tr>
       <td>
         <pre>
-{}
+
         </pre>
       </td>
       <td>
@@ -491,3 +491,48 @@ body: none
     </tr>
   </tbody>
 </table>
+
+<!-- right join -->
+
+<h3>Right Join</h3>
+<p>Common content between table 1 and table 2 and all content of Table 2</p>
+<pre>
+endpoint: libraries-stu-right-join
+headers: none
+body: none
+</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+
+        </pre>
+      </td>
+      <td>
+        <pre>
+[
+  {
+    "name": "seeder3",
+    "book": "book two",
+    "due_date": "2023-10-18"
+  },
+  {
+    "name": null,
+    "book": "book three",
+    "due_date": null
+  },
+]
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
