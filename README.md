@@ -584,3 +584,43 @@ body: none
   </tbody>
 </table>
 
+<!-- self join -->
+<h3>Self Join</h3>
+<p>Student having montors also</p>
+<pre>
+endpoint: libraries-stu-self-join
+headers: none
+body: none
+</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+{}
+        </pre>
+      </td>
+      <td>
+        <pre>
+[
+  {
+    "student_name": "seeder3",
+    "mentor_name": "seeder2"
+  },
+  {
+    "student_name": "seeder1",
+    "mentor_name": "seeder3"
+  },
+]
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
