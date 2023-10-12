@@ -46,4 +46,17 @@ class StudentController extends Controller
 
         return $crossJoinResult;
     }
+    // self join
+    public function studentsWithMentors()
+    {
+        $studentsWithMentors = DB::table('students AS T1') // Alias for the first instance of the students table
+            ->crossJoin('students AS T2', 'T1.mentor_id', '=', 'T2.id') // Alias for the second instance of the students table
+            ->select(
+                'T1.name AS student_name', // Student's name
+                'T2.name AS mentor_name' // Mentor's name
+            )
+            ->get();
+
+        return $studentsWithMentors;
+    }
 }

@@ -20,7 +20,14 @@ return new class extends Migration
             $table->string('city');
             $table->string('phone');
             $table->string('password');
+            $table->unsignedBigInteger('mentor_id')->nullable(); // Add mentor_id column
             $table->timestamps();
+
+            $table->foreign('mentor_id')
+                ->references('id')
+                ->on('students')
+                ->onUpdate('cascade')
+                ->onDelete('set null'); // Set mentor_id to null if mentor student is deleted
         });
     }
 
