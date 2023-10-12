@@ -449,3 +449,45 @@ body: none
     </tr>
   </tbody>
 </table>
+
+<h3>Left Join</h3>
+<p>Common content between table 1 and table 2 and all content of Table 1</p>
+<pre>
+endpoint: libraries-stu-left-join
+headers: none
+body: none
+</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+{}
+        </pre>
+      </td>
+      <td>
+        <pre>
+[
+  {
+    "name": "seeder1",
+    "book": "book one",
+    "due_date": "2023-10-07"
+  },
+  {
+    "name": "seeder2",
+    "book": null,
+    "due_date": null
+  },
+]
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
