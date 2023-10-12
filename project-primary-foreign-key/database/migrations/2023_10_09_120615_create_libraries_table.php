@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('libraries', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('stu_id');
+            $table->unsignedBigInteger('stu_id')->nullable();
             $table->foreign('stu_id')
                     ->references('id')
                     ->on('students')
@@ -21,7 +21,7 @@ return new class extends Migration
                     ->onDelete('cascade');
             $table->string('book');
             $table->date('due_date')->nullable();
-            $table->boolean('status');
+            $table->boolean('status')->nullable();
         });
     }
 

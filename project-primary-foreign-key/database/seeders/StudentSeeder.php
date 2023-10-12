@@ -14,24 +14,35 @@ class StudentSeeder extends Seeder
             [
                 [
                     'name' => 'seeder1',
-                    'email' => 'seeder1@gmail.com'
+                    'age' => 25,
+                    'email' => 'seeder1@gmail.com',
+                    'address' => 'pakistan',
+                    'city' => 'lahore',
+                    'phone' => '1234567890',
+                    'password' => '12345678'
                 ],
                 [
                     'name' => 'seeder2',
-                    'email' => 'seeder2@gmail.com'
+                    'age' => 25,
+                    'email' => 'seeder2@gmail.com',
+                    'address' => 'pakistan',
+                    'city' => 'lahore',
+                    'phone' => '1234567890',
+                    'password' => '12345678'
                 ],
                 [
                     'name' => 'seeder3',
-                    'email' => 'seeder3@gmail.com'
+                    'age' => 25,
+                    'email' => 'seeder3@gmail.com',
+                    'address' => 'pakistan',
+                    'city' => 'lahore',
+                    'phone' => '1234567890',
+                    'password' => '12345678'
                 ],
             ]
         );
         $students->each(function($student){
             Student::create($student);
         });
-        Student::create([
-            'name' => 'seeder',
-            'email' => 'seeder@gmail.com'
-        ]);
     }
 }
