@@ -624,3 +624,44 @@ body: none
     </tr>
   </tbody>
 </table>
+
+<!-- union of two tables -->
+<h3>Union of Two Tables</h3>
+<p>Student and lecturer table data combined</p>
+<pre>
+endpoint: union-data
+headers: none
+body: none
+</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+{}
+        </pre>
+      </td>
+      <td>
+        <pre>
+[
+  {
+    "name": "seeder1",
+    "age": 25
+  },
+  {
+    "name": "Lecturer 1",
+    "age": 35
+  },
+]
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
