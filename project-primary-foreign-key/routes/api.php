@@ -28,3 +28,5 @@ Route::get('/libraries-stu-right-join', [StudentController::class, 'rightJoinStu
 Route::get('/libraries-stu-cross-join', [StudentController::class, 'crossJoinStudentsWithLibraries']);
 // self join
 Route::get('/libraries-stu-self-join', [StudentController::class, 'studentsWithMentors']);
+// union data
+Route::get('/union-data', [StudentController::class, 'unionData']);

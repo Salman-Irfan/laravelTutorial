@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
         // seeder files
         $this->call([
             StudentSeeder::class,
-            LibrarySeeder::class
+            LibrarySeeder::class,
+            LecturerSeeder::class
         ]);
     }
 }

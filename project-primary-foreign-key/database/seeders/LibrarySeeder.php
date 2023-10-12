@@ -11,32 +11,36 @@ class LibrarySeeder extends Seeder
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run()
     {
-        $libraries = collect(
+        $libraries = [
             [
-                [
-                    'stu_id' => 1,
-                    'book' => 'book 1',
-                    'due_date' => 2023-08-12,
-                    'status' => true,
-                ],
-                [
-                    'stu_id' => 2,
-                    'book' => 'book 2',
-                    'due_date' => 2023-08-12,
-                    'status' => true,
-                ],
-                [
-                    'stu_id' => 3,
-                    'book' => 'book 2',
-                    'due_date' => 2023-08-12,
-                    'status' => true,
-                ],
-            ]
-        );
-        $libraries->each(function ($library) {
-            Library::create($library);
-        });
+                'stu_id' => 1,
+                // Replace with valid student IDs
+                'book' => 'Book One',
+                'due_date' => '2023-10-15',
+                'status' => 1,
+                // 1 for issued, 0 for not issued
+            ],
+            [
+                'stu_id' => 2,
+                // Replace with valid student IDs
+                'book' => 'Book Two',
+                'due_date' => '2023-10-20',
+                'status' => 1,
+            ],
+            [
+                'stu_id' => 3,
+                // Replace with valid student IDs
+                'book' => 'Book Three',
+                'due_date' => '2023-10-25',
+                'status' => 0,
+                // Not issued
+            ],
+        ];
+
+        foreach ($libraries as $libraryData) {
+            Library::create($libraryData);
+        }
     }
 }

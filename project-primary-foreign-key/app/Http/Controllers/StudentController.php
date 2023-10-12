@@ -59,4 +59,21 @@ class StudentController extends Controller
 
         return $studentsWithMentors;
     }
+    // union with lecturers
+    public function unionData()
+    {
+        $students = DB::table('students')
+            ->select('name', 'age');
+
+        $lecturers = DB::table('lecturers')
+            ->select('name', 'age');
+
+        $result = $students
+            ->union($lecturers)
+            ->get();
+
+        return $result;
+    }
+
+
 }
