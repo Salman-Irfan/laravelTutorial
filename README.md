@@ -536,3 +536,51 @@ body: none
   </tbody>
 </table>
 
+<!-- cross join -->
+<h3>Cross Join</h3>
+<p>All possible combinations of table 1 with table 2</p>
+<pre>
+endpoint: libraries-stu-cross-join
+headers: none
+body: none
+</pre>
+
+<table>
+  <thead>
+    <tr>
+      <th>Request</th>
+      <th>Response</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <pre>
+{}
+        </pre>
+      </td>
+      <td>
+        <pre>
+[
+  {
+    "name": "seeder1",
+    "book": "book one",
+    "due_date": "2023-10-07"
+  },
+  {
+    "name": "seeder2",
+    "book": "book one",
+    "due_date": "2023-10-07"
+  },
+  {
+    "name": "seeder3",
+    "book": "book one",
+    "due_date": "2023-10-07"
+  },
+]
+        </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
